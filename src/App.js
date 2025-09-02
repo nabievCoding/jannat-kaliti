@@ -16,6 +16,7 @@ import LiveVoiceChat from './components/VoiceChatApp'
 import MusicPlayer from './components/MusicPlayer';
 import QnA from './components/QnA';
 import SettingsPage from './components/SettingsPage';
+import imgLogo from './Logo.png'
 function App() {
   const [activeBtnMenu, setActiveBtnMenu] = useState(1);
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -28,7 +29,7 @@ function App() {
       <div className="container">
         <div className='sidebar-container' onClick={()=>{setSidebarOpen(false)}} style={{left:sidebarOpen?'0':'-100%'}}>
           <div className='sidebar'>
-          <div className="logo"><img src="../Logo.png" className='logoImage' alt="xatolik"/><X onClick={()=>{setSidebarOpen(false)}} style={{display:sidebarOpen?'block':'none'}}/></div>
+          <div className="logo"><img src={imgLogo} className='logoImage' alt="xatolik"/><X onClick={()=>{setSidebarOpen(false)}} style={{display:sidebarOpen?'block':'none'}}/></div>
           <div className="menu">
             <ul>
               <li 
