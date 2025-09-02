@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/jannat-kaliti/static/css/main.6a541dac.css",
+    "main.js": "/jannat-kaliti/static/js/main.f50c64b3.js",
+    "static/js/453.86c66d1e.chunk.js": "/jannat-kaliti/static/js/453.86c66d1e.chunk.js",
+    "index.html": "/jannat-kaliti/index.html",
+    "main.6a541dac.css.map": "/jannat-kaliti/static/css/main.6a541dac.css.map",
+    "main.f50c64b3.js.map": "/jannat-kaliti/static/js/main.f50c64b3.js.map",
+    "453.86c66d1e.chunk.js.map": "/jannat-kaliti/static/js/453.86c66d1e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6a541dac.css",
+    "static/js/main.f50c64b3.js"
+  ]
+}
