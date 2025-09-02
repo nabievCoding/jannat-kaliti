@@ -1,0 +1,133 @@
+:root {
+    --own-bg: #126620;
+    --own-color: #fff;
+    --other-bg: #0e1c3b;
+    --other-color: #fff;
+    --bg: #111827;
+    --border: #d1d5db;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    background: var(--bg);
+}
+.chat-messages {
+    overflow-y: auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow: auto;
+    min-height: 0;
+    /* MUHIM: scroll ishlashi uchun */
+    -webkit-overflow-scrolling: touch;
+
+    
+}
+.timeSend{
+    font-size: 0.7rem;
+    color: #b0b0b0;
+    text-align: right;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.chat-message {
+    max-width: 70%;
+    padding: 10px 14px;
+    border-radius: 14px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.chat-message.own {
+    align-self: flex-end;
+    border-bottom-right-radius: 0;
+    background: var(--own-bg);
+    color: var(--own-color);
+    animation: animright 0.2s ease-out 1;
+}
+.chat-message.other {
+    border-bottom-left-radius: 0;
+    align-self: flex-start;
+    background: var(--other-bg);
+    color: var(--other-color);
+    animation: animleft 0.2s ease-out 1;
+
+}
+@keyframes animright {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);    
+  }
+}
+@keyframes animleft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);    
+  }
+}
+.owntext {
+    color: var(--own-color);
+}
+
+.othertext {
+    color: var(--other-color);
+}
+
+/* Media fayllar */
+.chat-message audio,
+.chat-message video {
+    max-width: 220px;
+    outline: none;
+    border-radius: 10px;
+}
+
+.video {
+    max-height: 200px;
+    border-radius: 12px;
+}
+
+/* Fayl konteyneri */
+.filecontainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #fff;
+    color: #111827;
+    cursor: pointer;
+    max-width: 250px;
+}
+
+.filecontainer:hover {
+    background: #f3f4f6;
+}
+
+/* Input joyi pastda fixed */
+.chat-input-wrapper {
+    border-top: 0.5px solid var(--border);
+    padding: 10px;
+    background-color: #374151;
+    flex-shrink: 0;
+}
